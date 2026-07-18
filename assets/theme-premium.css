@@ -1,0 +1,60 @@
+/* Entwurf A – "Premium": dunkel, Gold-Akzent */
+
+:root {
+  --bg: #0e1012;
+  --surface: #16191c;
+  --surface-2: #0e1012;
+  --footer-bg: #0e1012;
+  --text: #e8e6e2;
+  --heading: #ffffff;
+  --muted: #9a9ea3;
+  --line: rgba(255, 255, 255, .07);
+  --line-strong: rgba(255, 255, 255, .16);
+  --accent: #c6a15b;
+  --accent-strong: #dcbd82;
+  --accent-ink: #12130f;
+  --accent-line: rgba(198, 161, 91, .5);
+  --accent-shadow: none;
+  --badge-bg: transparent;
+  --badge-line: rgba(198, 161, 91, .4);
+  --ghost-bg: transparent;
+  --input-bg: #0e1012;
+  --chip: #1e2226;
+  --chip-float: rgba(14, 16, 18, .82);
+  --track: #2a2f34;
+  --thumb-ring: #0e1012;
+  --shadow: none;
+  --shadow-hover: 0 18px 40px rgba(0, 0, 0, .5);
+  --backdrop: rgba(6, 7, 8, .78);
+  --map-filter: grayscale(.4) invert(.92) hue-rotate(180deg);
+  --nav-panel: #101316;
+  --note-bg: #16191c;
+  --note-text: #b7bbc0;
+}
+
+.site-nav {
+  position: sticky; top: 0; z-index: 40;
+  background: rgba(14, 16, 18, .86);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.site-nav .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; padding-top: 14px; padding-bottom: 14px; position: relative;
+}
+.site-nav .nav-links a { color: #c7cace; }
+.site-nav .nav-links a:hover { color: var(--accent); }
+.site-nav .nav-links .btn {
+  padding: 10px 18px; border: 1px solid var(--accent);
+  color: var(--accent); background: transparent; font-size: 14px;
+}
+
+.hero {
+  background-image:
+    radial-gradient(120% 80% at 78% 20%, rgba(198, 161, 91, .18), transparent 55%),
+    linear-gradient(90deg, rgba(10, 11, 12, .92) 0%, rgba(10, 11, 12, .78) 42%, rgba(10, 11, 12, .35) 72%, rgba(10, 11, 12, .15) 100%),
+    linear-gradient(180deg, rgba(10, 11, 12, .5) 0%, rgba(10, 11, 12, .6) 45%, rgba(10, 11, 12, .95) 100%),
+    url('hero.jpg');
+}
+
+.band { background: #101316; border-top: 1px solid var(--line); }

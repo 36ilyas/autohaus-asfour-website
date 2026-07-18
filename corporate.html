@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autohaus Asfour Krefeld – Entwurf B (Corporate)</title>
+<meta name="description" content="Entwurf für den neuen Webauftritt des Autohauses Asfour in Krefeld: geprüfte Gebrauchtwagen, Zubehör und persönliche Beratung.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/theme-corporate.css">
+<link rel="stylesheet" href="assets/base.css">
+</head>
+<body>
+
+<p class="preview-note">Gestaltungsentwurf B – Beispielfahrzeuge, keine verbindlichen Angebote. <a href="index.html">Zur Entwurfsübersicht</a></p>
+
+<div class="topbar">
+  <div class="topbar__stripe"></div>
+  <div class="topbar__service">
+    <div class="wrap">
+      <a class="wordmark" href="#top"><b>ASFOUR</b><span>Autohaus Krefeld</span></a>
+      <div class="topbar__phone">
+        <small>Rufen Sie uns an</small>
+        <a href="tel:+4921516477010">02151 6477010</a>
+      </div>
+    </div>
+  </div>
+  <header class="site-nav">
+    <div class="wrap">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menü öffnen">☰</button>
+      <nav class="nav-links">
+        <a class="is-active" href="#top">Startseite</a>
+        <a href="#fahrzeuge">Fahrzeuge</a>
+        <a href="#leistungen">Unsere Leistungen</a>
+        <a href="#ueber">Über uns</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<section class="hero" id="top">
+  <div class="wrap hero__inner">
+    <p class="badge"><span class="dot"></span>Autohaus in Krefeld</p>
+    <h1>Ihr nächstes Auto.<br><span style="color:var(--accent)">Mit Vertrauen gewählt.</span></h1>
+    <p class="lead">Geprüfte Gebrauchtwagen aus unserem Bestand – transparent bepreist, technisch geprüft und persönlich übergeben. Probefahrt nach Terminvereinbarung.</p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="#fahrzeuge">Fahrzeuge ansehen →</a>
+      <a class="btn btn--ghost" href="#kontakt">Beratung anfragen</a>
+    </div>
+    <div class="stats">
+      <div><b>20+</b><span>Jahre Erfahrung</span></div>
+      <div><b>100 %</b><span>technisch geprüfte Fahrzeuge</span></div>
+      <div><b id="total-cars">6</b><span>Fahrzeuge im Bestand</span></div>
+    </div>
+  </div>
+</section>
+
+<main>
+<section class="section" id="fahrzeuge">
+  <div class="wrap">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:36px">
+      <div>
+        <p class="eyebrow">Aktuelle Inserate</p>
+        <h2 class="h2">Unsere Fahrzeuge</h2>
+      </div>
+      <p class="lead" id="result-count" style="font-size:14px"></p>
+    </div>
+
+    <form class="filter" onsubmit="return false">
+      <div>
+        <label for="f-marke">Marke</label>
+        <select id="f-marke"></select>
+      </div>
+      <div>
+        <label for="f-kraftstoff">Kraftstoff</label>
+        <select id="f-kraftstoff"></select>
+      </div>
+      <div>
+        <label for="f-getriebe">Getriebe</label>
+        <select id="f-getriebe"></select>
+      </div>
+      <div>
+        <label for="f-preis">Preis bis <b id="l-preis"></b></label>
+        <input type="range" id="f-preis">
+      </div>
+      <div>
+        <label for="f-km">Kilometer bis <b id="l-km"></b></label>
+        <input type="range" id="f-km">
+      </div>
+      <div>
+        <label for="f-jahr">Erstzulassung ab <b id="l-jahr"></b></label>
+        <input type="range" id="f-jahr">
+      </div>
+      <div class="filter__foot">
+        <div>
+          <span>Sortieren:</span>
+          <label for="f-sort" style="position:absolute;left:-9999px">Sortierung</label>
+          <select id="f-sort"></select>
+        </div>
+        <button class="btn-reset" type="button" id="f-reset">Filter zurücksetzen</button>
+      </div>
+    </form>
+
+    <div class="cars" id="cars"></div>
+
+    <div class="empty" id="empty" hidden>
+      <strong>Keine Fahrzeuge gefunden</strong>
+      <p>Passen Sie Ihre Filter an oder <a href="#" data-reset>setzen Sie sie zurück</a>.</p>
+    </div>
+
+    <p class="disclosure">Alle Angaben ohne Gewähr. Zwischenverkauf vorbehalten. Angaben zu Verbrauch und CO₂-Emissionen nach WLTP; Details finden Sie in der jeweiligen Fahrzeugansicht.</p>
+  </div>
+</section>
+
+<section class="section band" id="leistungen">
+  <div class="wrap">
+    <p class="eyebrow">Unsere Leistungen</p>
+    <h2 class="h2" style="max-width:640px;margin-bottom:48px">Alles rund ums Auto – aus einer Hand</h2>
+    <div class="grid-3">
+      <div class="panel">
+        <p class="num">01</p>
+        <h3>Fahrzeugverkauf</h3>
+        <p>Geprüfte Gebrauchtwagen aus solidem Bestand. Sie finden Ihr Wunschfahrzeug nicht im Angebot? Sprechen Sie uns an – wir suchen es für Sie.</p>
+      </div>
+      <div class="panel">
+        <p class="num">02</p>
+        <h3>Zubehör &amp; Originalteile</h3>
+        <p>Beschaffung von Original- und Ersatzteilen für gängige Fabrikate – passgenau, langlebig und zu fairen Konditionen.</p>
+      </div>
+      <div class="panel">
+        <p class="num">03</p>
+        <h3>Service &amp; Beratung</h3>
+        <p>Persönliche Beratung, Unterstützung bei Finanzierung und Zulassung sowie Vermittlung von Inspektion und Hauptuntersuchung.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ueber">
+  <div class="wrap grid-2">
+    <div>
+      <p class="eyebrow">Über uns</p>
+      <h2 class="h2" style="margin-bottom:24px">Ihre Zufriedenheit ist unser oberstes Ziel</h2>
+      <p class="lead" style="margin-bottom:18px">Bei uns finden Sie Qualität zu soliden Preisen. Ihnen zur Seite steht unser Fachpersonal, das jeden Wunsch zu erfüllen bereit ist. Langjährige Erfahrung ermöglicht es uns, Ihnen die besten Dienstleistungen zu bieten.</p>
+      <p class="lead">Entscheiden Sie sich für das Auto Ihrer Vorstellungen – den Rest überlassen Sie uns.</p>
+      <div class="checks">
+        <span class="check"><i>✓</i>Transparente Preise</span>
+        <span class="check"><i>✓</i>Probefahrt nach Termin</span>
+        <span class="check"><i>✓</i>Persönliche Beratung</span>
+      </div>
+    </div>
+    <div class="media-frame">
+      <img src="assets/autohaus-krefeld.jpg" alt="Ausstellungsfläche des Autohauses Asfour in Krefeld" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="section band" id="kontakt">
+  <div class="wrap grid-2" style="align-items:stretch">
+    <div>
+      <p class="eyebrow">Kontakt</p>
+      <h2 class="h2" style="margin-bottom:32px">Besuchen Sie uns</h2>
+      <dl class="contact-list">
+        <div>
+          <dt>Adresse</dt>
+          <dd>Autohaus Asfour Krefeld<br>Oberdießemer Straße 199<br>47805 Krefeld</dd>
+        </div>
+        <div class="contact-row">
+          <div>
+            <dt>Telefon</dt>
+            <dd><a href="tel:+4921516477010">02151 6477010</a></dd>
+          </div>
+          <div>
+            <dt>Mobil</dt>
+            <dd><a href="tel:+491739993340">0173 9993340</a></dd>
+          </div>
+        </div>
+        <div>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:autohausasfour@gmail.com">autohausasfour@gmail.com</a></dd>
+        </div>
+        <div>
+          <dt>Termine</dt>
+          <dd>Besichtigung und Probefahrt nach telefonischer Vereinbarung.</dd>
+        </div>
+      </dl>
+      <a class="btn btn--primary" href="tel:+4921516477010" style="margin-top:24px">Jetzt anrufen</a>
+    </div>
+    <div class="map">
+      <iframe title="Karte: Oberdießemer Straße 199, 47805 Krefeld" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=6.575%2C51.322%2C6.605%2C51.338&amp;layer=mapnik&amp;marker=51.330%2C6.590"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <span class="wordmark"><b style="font-size:18px">ASFOUR</b><span>Autohaus</span></span>
+      <span class="meta">© <span id="year">2026</span> Autohaus Asfour Krefeld · Alle Rechte vorbehalten</span>
+    </div>
+    <p class="legal">
+      <strong>Hinweis:</strong> Diese Seite ist ein Gestaltungsentwurf. Die gezeigten Fahrzeuge, Preise und
+      Ausstattungsangaben sind Beispieldaten und stellen kein verbindliches Angebot dar.
+      Vor der Veröffentlichung sind Impressum, Datenschutzerklärung und die tatsächlichen Bestandsdaten zu ergänzen.<br>
+      Fahrzeugfotos: Wikimedia Commons (CC BY / CC BY-SA) – Einzelnachweise siehe
+      <a href="BILDNACHWEIS.md">Bildnachweis</a>.
+    </p>
+  </div>
+</footer>
+
+<dialog class="modal" id="car-dialog"></dialog>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

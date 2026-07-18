@@ -1,0 +1,95 @@
+/* Entwurf B – "Corporate": hell, Grün-Akzent (nah an der bisherigen CI) */
+
+:root {
+  --bg: #eef0ec;
+  --surface: #ffffff;
+  --surface-2: #f6f7f4;
+  --footer-bg: #e7e9e4;
+  --text: #1d2124;
+  --heading: #181b1e;
+  --muted: #5f6469;
+  --line: #e2e5df;
+  --line-strong: #d7dad3;
+  --accent: #5f9c1c;
+  --accent-strong: #74b32b;
+  --accent-ink: #143000;
+  --accent-line: rgba(140, 198, 63, .6);
+  --accent-shadow: 0 6px 18px rgba(140, 198, 63, .35);
+  --badge-bg: rgba(255, 255, 255, .65);
+  --badge-line: rgba(111, 158, 30, .45);
+  --ghost-bg: #ffffff;
+  --input-bg: #f6f7f4;
+  --chip: #f0f2ed;
+  --chip-float: rgba(255, 255, 255, .92);
+  --track: #d5d8d2;
+  --thumb-ring: #ffffff;
+  --shadow: 0 2px 10px rgba(0, 0, 0, .05);
+  --shadow-hover: 0 14px 30px rgba(0, 0, 0, .12);
+  --backdrop: rgba(20, 24, 20, .5);
+  --map-filter: none;
+  --nav-panel: #f5f6f3;
+  --note-bg: #ffffff;
+  --note-text: #5f6469;
+}
+
+.btn--primary { background: #8cc63f; color: var(--accent-ink); font-weight: 700; }
+
+/* Kopfbereich: Signalstreifen, Servicezeile, Reiter-Navigation */
+
+.topbar { position: sticky; top: 0; z-index: 40; }
+
+.topbar__stripe {
+  height: 7px; background: linear-gradient(90deg, #8cc63f, #74b32b);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .18);
+}
+
+.topbar__service {
+  background: linear-gradient(180deg, #ffffff 0%, #f0f1ed 60%, #e6e8e2 100%);
+  border-bottom: 1px solid var(--line-strong);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8);
+}
+.topbar__service .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 14px; padding-top: 11px; padding-bottom: 11px;
+}
+.topbar__phone { text-align: right; }
+.topbar__phone small {
+  display: block; font-size: 10px; letter-spacing: .16em;
+  text-transform: uppercase; color: #7d8288; margin-bottom: 1px;
+}
+.topbar__phone a { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; color: var(--heading); }
+
+.site-nav {
+  background: linear-gradient(180deg, #f5f6f3, #e7e9e4);
+  border-bottom: 3px solid #8cc63f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
+.site-nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; position: relative; }
+.site-nav .nav-links { gap: 3px; flex-wrap: wrap; }
+.site-nav .nav-links a {
+  padding: 12px 22px; color: #3a3f45; font-weight: 600;
+  border-radius: 4px 4px 0 0;
+}
+.site-nav .nav-links a:hover { background: rgba(140, 198, 63, .16); color: var(--accent); }
+.site-nav .nav-links a.is-active {
+  background: linear-gradient(180deg, #9fd642, #78b52d); color: #183500; font-weight: 700;
+}
+.site-nav .nav-toggle { margin: 8px 0; }
+
+.hero {
+  background-image:
+    radial-gradient(120% 80% at 82% 20%, rgba(140, 198, 63, .16), transparent 55%),
+    linear-gradient(90deg, rgba(238, 240, 236, .96) 0%, rgba(238, 240, 236, .84) 40%, rgba(238, 240, 236, .28) 78%, rgba(238, 240, 236, .06) 100%),
+    url('hero.jpg');
+}
+
+.band { background: var(--surface-2); border-top: 1px solid var(--line); }
+
+@media (max-width: 720px) {
+  .site-nav .nav-links a.is-active { background: rgba(140, 198, 63, .18); color: var(--accent-ink); border-radius: 0; }
+  .hero {
+    background-image:
+      linear-gradient(180deg, rgba(238, 240, 236, .94) 0%, rgba(238, 240, 236, .88) 60%, rgba(238, 240, 236, .8) 100%),
+      url('hero.jpg');
+  }
+}

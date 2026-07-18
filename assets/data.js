@@ -1,0 +1,156 @@
+/* Fahrzeugbestand – Beispieldaten für den Website-Entwurf.
+   Preise, Verbrauchs- und CO2-Werte sind marktüblich kalkuliert und müssen vor
+   dem Live-Gang durch die echten Bestandsdaten ersetzt werden. */
+
+const FAHRZEUGE = [
+  {
+    id: 'bmw-320d-touring',
+    brand: 'BMW',
+    title: 'BMW 320d Touring Sport Line',
+    price: 30900,
+    tax: 'ausweisbar',
+    km: 38500,
+    year: 2021,
+    ez: '03/2021',
+    hu: '03/2027',
+    owners: 1,
+    fuel: 'Diesel',
+    gear: 'Automatik',
+    ps: 190,
+    kw: 140,
+    consumption: '5,1 l/100 km (komb.)',
+    co2: '134 g/km',
+    effClass: 'B',
+    features: ['Navigation Business', 'LED-Scheinwerfer', 'Sportsitze', '3-Zonen-Klimaautomatik', 'Park-Assistent', 'Anhängerkupplung abnehmbar', 'Sitzheizung', 'DAB-Tuner'],
+    image: 'assets/fahrzeuge/bmw-320d-touring.jpg',
+    desc: 'Gepflegter 320d Touring aus erster Hand, durchgehend scheckheftgepflegt und unfallfrei. Der Sport-Line-Ausstattung entsprechend mit Sportsitzen, LED-Scheinwerfern und Navigation. Durch die abnehmbare Anhängerkupplung und den großen Kofferraum ein zuverlässiger Begleiter für Familie und Langstrecke.'
+  },
+  {
+    id: 'mercedes-c200',
+    brand: 'Mercedes-Benz',
+    title: 'Mercedes-Benz C 200 T-Modell AMG Line',
+    price: 26900,
+    tax: 'differenz',
+    km: 52100,
+    year: 2020,
+    ez: '09/2020',
+    hu: '03/2027',
+    owners: 2,
+    fuel: 'Benzin',
+    gear: 'Automatik',
+    ps: 184,
+    kw: 135,
+    consumption: '7,1 l/100 km (komb.)',
+    co2: '162 g/km',
+    effClass: 'D',
+    features: ['AMG Line Exterieur', 'MBUX Multimediasystem', 'Ambientebeleuchtung (64 Farben)', 'LED High Performance', 'Rückfahrkamera', 'Totwinkel-Assistent', 'Sitzheizung', 'Tempomat'],
+    image: 'assets/fahrzeuge/mercedes-c200.jpg',
+    desc: 'Elegantes C 200 T-Modell mit AMG-Line-Paket, MBUX-Multimediasystem und Ambientebeleuchtung. Regelmäßig in der Fachwerkstatt gewartet, unfallfrei und technisch einwandfrei. Ein komfortabler Reisewagen mit gepflegtem Innenraum.'
+  },
+  {
+    id: 'audi-a4-avant',
+    brand: 'Audi',
+    title: 'Audi A4 Avant 40 TDI quattro S line',
+    price: 33900,
+    tax: 'ausweisbar',
+    km: 29800,
+    year: 2022,
+    ez: '05/2022',
+    hu: '05/2027',
+    owners: 1,
+    fuel: 'Diesel',
+    gear: 'Automatik',
+    ps: 204,
+    kw: 150,
+    consumption: '5,6 l/100 km (komb.)',
+    co2: '147 g/km',
+    effClass: 'C',
+    features: ['S line Sportpaket', 'Audi virtual cockpit plus', 'Matrix-LED-Scheinwerfer', 'Assistenzpaket Tour', '3-Zonen-Klimaautomatik', 'Rückfahrkamera', 'Keyless Go', 'Anschlussgarantie möglich'],
+    image: 'assets/fahrzeuge/audi-a4-avant.jpg',
+    desc: 'Junger A4 Avant mit quattro-Antrieb, S-line-Ausstattung und nur einem Vorbesitzer. Ausgestattet mit Audi virtual cockpit plus, Matrix-LED-Scheinwerfern und umfangreichem Assistenzpaket. Sehr gepflegter Zustand bei niedriger Laufleistung.'
+  },
+  {
+    id: 'vw-golf-gti',
+    brand: 'Volkswagen',
+    title: 'VW Golf 8 GTI',
+    price: 27900,
+    tax: 'differenz',
+    km: 41200,
+    year: 2021,
+    ez: '09/2021',
+    hu: '09/2027',
+    owners: 2,
+    fuel: 'Benzin',
+    gear: 'Schaltgetriebe',
+    ps: 245,
+    kw: 180,
+    consumption: '7,4 l/100 km (komb.)',
+    co2: '168 g/km',
+    effClass: 'F',
+    features: ['Digital Cockpit Pro', 'DCC adaptive Fahrwerksregelung', 'IQ.Light LED-Matrix', 'Sportsitze im Karo-Design', 'Klimaautomatik', 'App-Connect', 'Parksensoren vorn und hinten'],
+    image: 'assets/fahrzeuge/vw-golf-gti.jpg',
+    desc: 'Sportlicher Golf GTI mit 6-Gang-Schaltgetriebe, adaptivem DCC-Fahrwerk und IQ.Light-Matrix-Scheinwerfern. Technisch und optisch in sehr gutem Zustand, Reifen mit gutem Restprofil. Probefahrt jederzeit nach Terminvereinbarung möglich.'
+  },
+  {
+    id: 'tesla-model-3',
+    brand: 'Tesla',
+    title: 'Tesla Model 3 RWD',
+    price: 25900,
+    tax: 'ausweisbar',
+    km: 18400,
+    year: 2023,
+    ez: '02/2023',
+    hu: '02/2029',
+    owners: 1,
+    fuel: 'Elektro',
+    gear: 'Automatik',
+    ps: 283,
+    kw: 208,
+    consumption: '13,2 kWh/100 km (komb.)',
+    co2: '0 g/km',
+    effClass: 'A',
+    features: ['Reichweite bis 513 km (WLTP)', 'Autopilot (Basis)', 'Wärmepumpe', 'Panorama-Glasdach', 'Sitzheizung vorn und hinten', '18" Aero-Felgen', 'Batteriegarantie bis 02/2031 bzw. 160.000 km'],
+    image: 'assets/fahrzeuge/tesla-model-3.jpg',
+    desc: 'Nahezu neuwertiges Model 3 mit Heckantrieb und einer WLTP-Reichweite von bis zu 513 km. Herstellergarantie auf Batterie und Antrieb läuft noch, Fahrzeug ist unfallfrei und aus erster Hand. Laden mit bis zu 170 kW am Schnellladepunkt.'
+  },
+  {
+    id: 'evoque',
+    brand: 'Land Rover',
+    title: 'Range Rover Evoque D180 SE',
+    price: 24900,
+    tax: 'differenz',
+    km: 61700,
+    year: 2019,
+    ez: '11/2019',
+    hu: '11/2027',
+    owners: 2,
+    fuel: 'Diesel',
+    gear: 'Automatik',
+    ps: 180,
+    kw: 132,
+    consumption: '6,8 l/100 km (komb.)',
+    co2: '179 g/km',
+    effClass: 'E',
+    features: ['Allradantrieb', 'Panorama-Schiebedach', 'Ledersitze beheizbar', 'Meridian Sound-System', 'Rückfahrkamera', 'Keyless Entry', 'Elektrische Heckklappe'],
+    image: 'assets/fahrzeuge/evoque.jpg',
+    desc: 'Stilvoller Evoque mit Allradantrieb, Panoramadach und beheizbaren Ledersitzen. Vollständige Servicehistorie, TÜV neu bei Übergabe. Ein souveräner Begleiter für Stadt, Landstraße und leichtes Gelände.'
+  }
+];
+
+/* Repräsentatives Finanzierungsbeispiel – Grundlage für die Ratenanzeige. */
+const FINANZIERUNG = {
+  laufzeit: 72,          // Monate
+  anzahlungAnteil: 0.20, // 20 % Anzahlung
+  zinsEff: 0.0499        // 4,99 % effektiver Jahreszins
+};
+
+const KONTAKT = {
+  name: 'Autohaus Asfour Krefeld',
+  strasse: 'Oberdießemer Straße 199',
+  ort: '47805 Krefeld',
+  telefon: '02151 6477010',
+  telefonHref: 'tel:+4921516477010',
+  mobil: '0173 9993340',
+  mobilHref: 'tel:+491739993340',
+  mail: 'autohausasfour@gmail.com'
+};
