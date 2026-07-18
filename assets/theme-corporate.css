@@ -88,16 +88,30 @@
 @media (max-width: 720px) {
   .site-nav .nav-links a.is-active { background: rgba(140, 198, 63, .18); color: var(--accent-ink); border-radius: 0; }
 
-  /* Kopfbereich straffen: beim Scrollen bleibt nur die Navigation stehen. */
-  .topbar { position: static; }
-  .site-nav { position: sticky; top: 0; z-index: 40; }
-  .topbar__service .wrap { padding-top: 8px; padding-bottom: 8px; }
-  .topbar__phone a { font-size: 16px; }
+  /* Kopfbereich auf eine Zeile eindampfen: Logo, Telefon, Menütaste.
+     Die Reiter-Leiste bleibt nur als grüner Trennstrich stehen und dient
+     als Anker für das aufklappende Menü. */
+  .topbar__service .wrap {
+    flex-wrap: nowrap; gap: 14px;
+    padding-top: 7px; padding-bottom: 7px;
+  }
+  .topbar__service .wordmark { flex: 0 1 auto; min-width: 0; }
+  .topbar__service .wordmark b { font-size: 19px; }
+  .topbar__service .wordmark span { display: none; }
+  .topbar__phone { margin-left: auto; }
+  .topbar__phone small { display: none; }
+  .topbar__phone a { font-size: 15px; }
   .site-nav .wrap { padding-top: 0; padding-bottom: 0; }
+  .site-nav .nav-toggle { margin: 0; }
 
+  /* Overlay nach unten hin öffnen, damit das Fahrzeug im Bild sichtbar wird.
+     Der Text darüber braucht dafür etwas mehr Farbtiefe. */
   .hero {
     background-image:
-      linear-gradient(180deg, rgba(238, 240, 236, .94) 0%, rgba(238, 240, 236, .88) 60%, rgba(238, 240, 236, .8) 100%),
+      linear-gradient(180deg, rgba(238, 240, 236, .93) 0%, rgba(238, 240, 236, .84) 42%, rgba(238, 240, 236, .62) 76%, rgba(238, 240, 236, .45) 100%),
       url('hero.jpg');
+    background-position: center 60%;
   }
+  .hero .lead { color: #3b4045; }
+  .hero .stats span { color: #43484d; }
 }

@@ -274,7 +274,7 @@ body:has(dialog.modal[open]) { overflow: hidden; }
   .stats b { font-size: 22px; }
   .stats span { font-size: 12px; }
 
-  .nav-toggle { display: block; }
+  .nav-toggle { display: block; width: 42px; height: 38px; font-size: 18px; }
   .nav-links {
     display: none; position: absolute; top: 100%; left: 0; right: 0;
     flex-direction: column; align-items: stretch; gap: 0;

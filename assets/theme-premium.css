@@ -58,3 +58,23 @@
 }
 
 .band { background: #101316; border-top: 1px solid var(--line); }
+
+@media (max-width: 720px) {
+  .site-nav .wrap { padding-top: 9px; padding-bottom: 9px; }
+  .wordmark b { font-size: 19px; }
+
+  /* Der seitliche Verlauf verdeckt auf schmalen Displays das ganze Motiv –
+     hier stattdessen von oben nach unten aufhellen. */
+  .hero {
+    background-image:
+      linear-gradient(180deg, rgba(10, 11, 12, .9) 0%, rgba(10, 11, 12, .78) 45%, rgba(10, 11, 12, .5) 78%, rgba(10, 11, 12, .35) 100%),
+      url('hero.jpg');
+    background-position: center 62%;
+  }
+  /* Der transparente Button steht jetzt über dem Motiv und braucht Grund. */
+  .hero .btn--ghost {
+    background: rgba(14, 16, 18, .58);
+    backdrop-filter: blur(4px);
+    border-color: rgba(255, 255, 255, .32);
+  }
+}
