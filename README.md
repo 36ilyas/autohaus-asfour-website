@@ -1,3 +1,20 @@
+# Website-Entwürfe
+
+Dieses Repository enthält zwei unabhängige Projekte:
+
+| Projekt | Ordner | Beschreibung |
+| --- | --- | --- |
+| Autohaus Asfour Krefeld | `/` (Wurzelverzeichnis) | Zwei Gestaltungsentwürfe für das Autohaus |
+| Kampfkunstschule DAMO | `kampfkunst-damo/` | Modernisierter Entwurf für kampfkunst-damo.de |
+
+## Kampfkunstschule DAMO (`kampfkunst-damo/`)
+
+Modernisierter One-Page-Entwurf für die Kampfkunstschule DAMO (Mönchengladbach-Rheydt
+und Erkelenz): dunkles Design mit Rot-/Gold-Akzenten, responsive Navigation,
+Kursübersicht, Trainingszeiten mit Tages-Tabs, Standorte und Kontakt.
+Statisches HTML/CSS/JS ohne Abhängigkeiten – Inhalte (insbesondere Trainingszeiten)
+vor dem Live-Gang prüfen, Impressum und Datenschutzerklärung ergänzen.
+
 # Autohaus Asfour Krefeld – Website-Entwürfe
 
 Zwei Gestaltungsentwürfe für den neuen Webauftritt des Autohauses Asfour in Krefeld.
