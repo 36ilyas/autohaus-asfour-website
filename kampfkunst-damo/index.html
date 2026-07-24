@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<meta name="description" content="Kampfkunstschule DAMO – Royal Martial-Arts Academy Europe e.V. Shaolin Kempo, Kickboxen, Tai Chi & Qi Gong, Kindertraining ab 4 Jahren in Mönchengladbach-Rheydt und Erkelenz.">
+<title>Kampfkunstschule DAMO – Shaolin Kempo, Kickboxen &amp; Tai Chi in Mönchengladbach und Erkelenz</title>
+<style>
+:root {
+  --bg: #0e0e11;
+  --bg-soft: #16161b;
+  --bg-card: #1c1c23;
+  --line: #2a2a33;
+  --text: #f2f0eb;
+  --text-dim: #a8a49c;
+  --red: #c8322b;
+  --red-bright: #e6453c;
+  --gold: #d9a441;
+  --gold-soft: #b8893a;
+  --radius: 14px;
+  --maxw: 1140px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--gold); text-decoration: none; }
+a:hover { color: var(--red-bright); }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+
+/* ---------- Entwurfsbanner ---------- */
+.draft-note {
+  background: #241a06;
+  color: #e5c477;
+  font-size: .8rem;
+  text-align: center;
+  padding: 6px 16px;
+  border-bottom: 1px solid #3a2c0d;
+}
+
+/* ---------- Header ---------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(14,14,17,.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 22px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+.brand { display: flex; align-items: center; gap: 12px; color: var(--text); }
+.brand:hover { color: var(--text); }
+.brand-mark {
+  width: 44px; height: 44px; flex: none;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 30%, var(--red-bright), var(--red) 55%, #7d1c17);
+  display: grid; place-items: center;
+  font-weight: 800; font-size: 1rem; letter-spacing: .02em;
+  color: #fff;
+  box-shadow: 0 0 0 2px var(--gold-soft), 0 6px 18px rgba(200,50,43,.35);
+}
+.brand-text b { display: block; font-size: 1.02rem; letter-spacing: .06em; }
+.brand-text span { display: block; font-size: .68rem; color: var(--text-dim); letter-spacing: .12em; text-transform: uppercase; }
+nav.menu { display: flex; gap: 26px; align-items: center; }
+nav.menu a {
+  color: var(--text-dim);
+  font-size: .92rem;
+  letter-spacing: .04em;
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+}
+nav.menu a:hover { color: var(--text); border-bottom-color: var(--gold); }
+.cta {
+  background: linear-gradient(135deg, var(--red-bright), var(--red));
+  color: #fff !important;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: .9rem;
+  border-bottom: none !important;
+  box-shadow: 0 6px 18px rgba(200,50,43,.35);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.cta:hover { transform: translateY(-1px); box-shadow: 0 9px 22px rgba(200,50,43,.5); }
+.burger {
+  display: none;
+  background: none; border: 1px solid var(--line); border-radius: 10px;
+  color: var(--text); font-size: 1.3rem; line-height: 1;
+  padding: 8px 12px; cursor: pointer;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 70% 60% at 78% 18%, rgba(200,50,43,.22), transparent 60%),
+    radial-gradient(ellipse 55% 50% at 15% 85%, rgba(217,164,65,.10), transparent 60%),
+    var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 48px;
+  align-items: center;
+  padding: 88px 22px 96px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .78rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.kicker::before { content: ""; width: 34px; height: 1px; background: var(--gold); }
+.hero h1 {
+  font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+.hero h1 em { font-style: normal; color: var(--red-bright); }
+.hero p.lead {
+  margin: 22px 0 32px;
+  color: var(--text-dim);
+  font-size: 1.08rem;
+  max-width: 34rem;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-ghost {
+  border: 1px solid var(--line);
+  color: var(--text);
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-size: .9rem;
+  font-weight: 600;
+  transition: border-color .15s ease;
+}
+.btn-ghost:hover { border-color: var(--gold); color: var(--text); }
+.hero-stats {
+  display: flex;
+  gap: 34px;
+  margin-top: 44px;
+  flex-wrap: wrap;
+}
+.stat b { display: block; font-size: 1.7rem; color: var(--gold); font-weight: 800; }
+.stat span { font-size: .82rem; color: var(--text-dim); letter-spacing: .04em; }
+.hero-visual { display: grid; place-items: center; }
+.enso { width: min(340px, 80%); filter: drop-shadow(0 12px 40px rgba(200,50,43,.35)); }
+
+/* ---------- Sektionen ---------- */
+section { padding: 84px 0; }
+section.alt { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.sec-head { max-width: 640px; margin-bottom: 44px; }
+.sec-head h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; letter-spacing: -.01em; }
+.sec-head p { color: var(--text-dim); margin-top: 12px; }
+
+/* ---------- Angebote ---------- */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  transition: transform .18s ease, border-color .18s ease;
+}
+.card:hover { transform: translateY(-4px); border-color: var(--gold-soft); }
+.card .icon {
+  width: 46px; height: 46px;
+  border-radius: 12px;
+  display: grid; place-items: center;
+  background: rgba(200,50,43,.14);
+  color: var(--red-bright);
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+.card h3 { font-size: 1.06rem; margin-bottom: 8px; }
+.card p { font-size: .9rem; color: var(--text-dim); }
+.card .tag {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-soft);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+/* ---------- Großmeister ---------- */
+.master {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+}
+.master-visual {
+  background: linear-gradient(160deg, var(--bg-card), #221317);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 38px 30px;
+  text-align: center;
+}
+.master-visual .belt {
+  width: 84px; height: 84px; margin: 0 auto 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #e0554c, var(--red) 60%, #6f1712);
+  box-shadow: 0 0 0 3px var(--gold-soft), 0 10px 30px rgba(200,50,43,.4);
+  display: grid; place-items: center;
+  font-size: 1.9rem; font-weight: 800; color: #fff;
+}
+.master-visual h3 { font-size: 1.25rem; }
+.master-visual .role { color: var(--gold); font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; margin-top: 6px; }
+.master-visual ul { list-style: none; margin-top: 22px; text-align: left; }
+.master-visual li {
+  font-size: .88rem; color: var(--text-dim);
+  padding: 9px 0 9px 26px;
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+.master-visual li::before { content: "◆"; position: absolute; left: 4px; color: var(--gold); font-size: .7rem; top: 12px; }
+.master-copy h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 18px; }
+.master-copy p { color: var(--text-dim); margin-bottom: 16px; }
+.master-copy strong { color: var(--text); }
+
+/* ---------- Trainingszeiten ---------- */
+.day-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 26px; }
+.day-tabs button {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  color: var(--text-dim);
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-size: .88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.day-tabs button:hover { border-color: var(--gold-soft); color: var(--text); }
+.day-tabs button.active {
+  background: linear-gradient(135deg, var(--red-bright), var(--red));
+  border-color: transparent;
+  color: #fff;
+}
+.schedule { display: none; }
+.schedule.active { display: block; }
+.slot {
+  display: grid;
+  grid-template-columns: 150px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+}
+.slot .time { font-weight: 700; color: var(--gold); font-variant-numeric: tabular-nums; }
+.slot .course { font-weight: 600; }
+.slot .who { font-size: .8rem; color: var(--text-dim); letter-spacing: .04em; text-transform: uppercase; }
+.schedule-note { font-size: .82rem; color: var(--text-dim); margin-top: 20px; }
+
+/* ---------- Standorte ---------- */
+.locations { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.loc {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+}
+.loc h3 { font-size: 1.15rem; display: flex; align-items: center; gap: 10px; }
+.loc h3 .pin { color: var(--red-bright); }
+.loc address { font-style: normal; color: var(--text-dim); margin: 12px 0 18px; }
+.loc .maplink { font-size: .88rem; font-weight: 600; }
+
+/* ---------- Kontakt ---------- */
+.contact-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: start; }
+.contact-list { list-style: none; margin-top: 26px; }
+.contact-list li {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+.contact-list .ico {
+  width: 38px; height: 38px; flex: none;
+  border-radius: 10px;
+  background: rgba(217,164,65,.12);
+  color: var(--gold);
+  display: grid; place-items: center;
+}
+.contact-list b { display: block; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim); }
+.contact-list a, .contact-list span.val { font-size: 1rem; color: var(--text); font-weight: 600; }
+.contact-list a:hover { color: var(--gold); }
+.probe {
+  background: linear-gradient(160deg, #241317, var(--bg-card));
+  border: 1px solid var(--gold-soft);
+  border-radius: var(--radius);
+  padding: 34px 30px;
+}
+.probe h3 { font-size: 1.3rem; margin-bottom: 12px; }
+.probe p { color: var(--text-dim); margin-bottom: 22px; }
+.probe .cta { display: inline-block; }
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 36px 0 44px;
+  background: var(--bg-soft);
+}
+.foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  color: var(--text-dim);
+  font-size: .84rem;
+}
+.foot nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.foot a { color: var(--text-dim); }
+.foot a:hover { color: var(--gold); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 920px) {
+  .hero-inner { grid-template-columns: 1fr; padding: 60px 22px 70px; }
+  .hero-visual { order: -1; }
+  .enso { width: 180px; }
+  .master, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .locations { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  nav.menu {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--line);
+    display: none;
+    padding: 10px 22px 18px;
+  }
+  nav.menu.open { display: flex; }
+  nav.menu a { padding: 12px 4px; border-bottom: 1px solid var(--line); }
+  nav.menu a.cta { margin-top: 14px; text-align: center; border-bottom: none !important; }
+  .burger { display: block; }
+  .slot { grid-template-columns: 1fr; gap: 4px; }
+  section { padding: 60px 0; }
+}
+</style>
+</head>
+<body>
+
+<div class="draft-note">Gestaltungsentwurf – Inhalte, Zeiten und Rechtstexte vor dem Live-Gang prüfen bzw. ergänzen.</div>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top">
+      <span class="brand-mark">DA</span>
+      <span class="brand-text">
+        <b>Kampfkunstschule DAMO</b>
+        <span>Royal Martial-Arts Academy Europe e.V.</span>
+      </span>
+    </a>
+    <button class="burger" aria-label="Menü öffnen" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
+    <nav class="menu" id="menu">
+      <a href="#angebot">Angebot</a>
+      <a href="#grossmeister">Großmeister</a>
+      <a href="#zeiten">Trainingszeiten</a>
+      <a href="#standorte">Standorte</a>
+      <a href="#kontakt" class="cta">Probetraining</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="kicker">Seit über 25 Jahren am Niederrhein</span>
+        <h1>Fernöstliche Kampfkunst.<br><em>Tradition trifft wirksame Selbstverteidigung.</em></h1>
+        <p class="lead">
+          Die Kampfkunstschule DAMO vereint traditionelle Kampfkunst mit moderner, effektiver
+          Selbstverteidigung – von Shaolin Kempo über Kickboxen bis Tai Chi &amp; Qi Gong.
+          Für Kinder ab 4 Jahren, Jugendliche und Erwachsene in Mönchengladbach-Rheydt und Erkelenz.
+        </p>
+        <div class="hero-actions">
+          <a class="cta" href="#kontakt">Kostenloses Probetraining</a>
+          <a class="btn-ghost" href="#angebot">Angebot entdecken</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>25+</b><span>Jahre Erfahrung</span></div>
+          <div class="stat"><b>10. Dan</b><span>Großmeister-Leitung</span></div>
+          <div class="stat"><b>2</b><span>Standorte</span></div>
+          <div class="stat"><b>ab 4</b><span>Jahren Kindertraining</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <!-- Ensō-Kreis mit Schriftzeichen-Anmutung -->
+        <svg class="enso" viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="82" stroke="#d9a441" stroke-width="2" stroke-dasharray="480 60" stroke-linecap="round" transform="rotate(-60 100 100)" opacity=".85"/>
+          <circle cx="100" cy="100" r="70" stroke="#c8322b" stroke-width="9" stroke-dasharray="380 70" stroke-linecap="round" transform="rotate(115 100 100)"/>
+          <text x="100" y="112" text-anchor="middle" font-size="52" font-weight="800" fill="#f2f0eb" font-family="'Segoe UI',system-ui,sans-serif">武</text>
+          <text x="100" y="146" text-anchor="middle" font-size="11" letter-spacing="4" fill="#a8a49c" font-family="'Segoe UI',system-ui,sans-serif">KAMPFKUNST</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Angebot -->
+  <section id="angebot">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Unser Angebot</h2>
+        <p>Vom traditionellen Kempo bis zum modernen Kickboxen – bei DAMO findet jede und jeder den passenden Weg. Alle Kurse werden von erfahrenen Trainerinnen und Trainern geleitet.</p>
+      </div>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="icon">拳</div>
+          <h3>Shaolin Kempo</h3>
+          <p>Traditionelle Kampfkunst in direkter Linie von Großmeister Dschero Khan – Technik, Formen und Philosophie.</p>
+          <span class="tag">Kinder &amp; Erwachsene</span>
+        </div>
+        <div class="card">
+          <div class="icon">🥊</div>
+          <h3>Kickboxen &amp; K1</h3>
+          <p>Kondition, Schlagkraft und Reaktion – vom Einsteigertraining bis zum ambitionierten Sparring.</p>
+          <span class="tag">Fitness &amp; Wettkampf</span>
+        </div>
+        <div class="card">
+          <div class="icon">氣</div>
+          <h3>Tai Chi &amp; Qi Gong</h3>
+          <p>Sanfte Bewegung, Atmung und innere Ruhe – Gesundheitstraining für Körper und Geist, für jedes Alter.</p>
+          <span class="tag">Gesundheit</span>
+        </div>
+        <div class="card">
+          <div class="icon">🐉</div>
+          <h3>Kindertraining ab 4</h3>
+          <p>Bambini-, Kleinkinder- und Kindergruppen: spielerisch Disziplin, Respekt und Selbstvertrauen entwickeln.</p>
+          <span class="tag">ab 4 Jahren</span>
+        </div>
+        <div class="card">
+          <div class="icon">🛡️</div>
+          <h3>Selbstverteidigung</h3>
+          <p>Goshin-Jutsu und realistische Selbstverteidigung – inklusive spezieller Kurse für Frauen.</p>
+          <span class="tag">Frauen-SV</span>
+        </div>
+        <div class="card">
+          <div class="icon">⚔️</div>
+          <h3>Arnis &amp; Waffenkampf</h3>
+          <p>Philippinische Stockkampfkunst und traditioneller Waffenkampf – Koordination und Präzision.</p>
+          <span class="tag">Tradition</span>
+        </div>
+        <div class="card">
+          <div class="icon">🤼</div>
+          <h3>MMA &amp; Thaiboxen</h3>
+          <p>Moderne Vollkontakt-Systeme für alle, die sich athletisch fordern wollen – Stand und Boden.</p>
+          <span class="tag">Intensiv</span>
+        </div>
+        <div class="card">
+          <div class="icon">👤</div>
+          <h3>Privattraining</h3>
+          <p>Individuelles Einzel- oder Gruppentraining nach Terminabsprache – auf deine Ziele zugeschnitten.</p>
+          <span class="tag">Auf Anfrage</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Großmeister -->
+  <section id="grossmeister" class="alt">
+    <div class="wrap master">
+      <div class="master-visual">
+        <div class="belt">師</div>
+        <h3>Sifu Toni Finken-Schaffrath</h3>
+        <div class="role">Großmeister · 10. Dan</div>
+        <ul>
+          <li>10. Dan Shaolin Kempo, Goshin-Jutsu Karate-Do und Kickboxen</li>
+          <li>Direkter Meisterschüler und Stilerbe von Großmeister Sifu Tze Prince Dschero Khan</li>
+          <li>Präsident der World Martial Arts Association W.M.A.A. – R.O.C. in Europa</li>
+          <li>Bundestrainer für Shaolin Kempo</li>
+        </ul>
+      </div>
+      <div class="master-copy">
+        <h2>Lernen beim Großmeister</h2>
+        <p>
+          Die Kampfkunstschule DAMO wurde vor mehr als 25 Jahren von <strong>Großmeister Toni
+          Finken-Schaffrath</strong> gegründet und wird bis heute von ihm geführt. Als direkter
+          Nachfolger von Großmeister Sifu Tze Prince Dschero Khan, dem Begründer des Shaolin Kempo,
+          gibt er die Kampfkunst in ihrer ursprünglichen Linie weiter.
+        </p>
+        <p>
+          Bei DAMO verbinden sich <strong>wirksame Selbstverteidigung</strong> und
+          <strong>traditionelle Kampfkunst</strong>: Durch die jahrzehntelange Erfahrung des
+          Großmeisters lernen Schülerinnen und Schüler in kurzer Zeit wesentliche Elemente aus
+          zahlreichen fernöstlichen Systemen – und erleben zugleich die philosophischen und
+          geistigen Inhalte, Techniken und Formen der alten Meister.
+        </p>
+        <p>
+          Ob Kind, Wiedereinsteiger oder Fortgeschrittene: Jede und jeder trainiert im eigenen
+          Tempo – mit Respekt, Disziplin und Freude an der Bewegung.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainingszeiten -->
+  <section id="zeiten">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Trainingszeiten</h2>
+        <p>Einfach zum gewünschten Training vorbeikommen und beim Trainer für ein kostenloses, unverbindliches Probetraining anmelden.</p>
+      </div>
+
+      <div class="day-tabs" role="tablist">
+        <button class="active" onclick="showDay(this,'mo')">Montag</button>
+        <button onclick="showDay(this,'di')">Dienstag</button>
+        <button onclick="showDay(this,'mi')">Mittwoch</button>
+        <button onclick="showDay(this,'do')">Donnerstag</button>
+        <button onclick="showDay(this,'fr')">Freitag</button>
+      </div>
+
+      <div class="schedule active" id="day-mo">
+        <div class="slot"><span class="time">16:30 – 17:30</span><span class="course">Kinderkickboxen</span><span class="who">Kinder</span></div>
+        <div class="slot"><span class="time">18:00 – 19:00</span><span class="course">Tai Chi &amp; Qi Gong</span><span class="who">Alle</span></div>
+        <div class="slot"><span class="time">19:00 – 20:30</span><span class="course">Kempo für Erwachsene</span><span class="who">Erwachsene</span></div>
+      </div>
+      <div class="schedule" id="day-di">
+        <div class="slot"><span class="time">16:30 – 17:30</span><span class="course">Kempo für Kleinkinder</span><span class="who">Kinder</span></div>
+        <div class="slot"><span class="time">17:30 – 19:00</span><span class="course">Kindergruppe 1</span><span class="who">Kinder</span></div>
+        <div class="slot"><span class="time">19:00 – 20:30</span><span class="course">Kickboxen für Erwachsene</span><span class="who">Erwachsene</span></div>
+        <div class="slot"><span class="time">19:00 – 20:30</span><span class="course">Chan Shaolin Si</span><span class="who">Erwachsene</span></div>
+        <div class="slot"><span class="time">ab 20:45</span><span class="course">MMA</span><span class="who">Erwachsene</span></div>
+      </div>
+      <div class="schedule" id="day-mi">
+        <div class="slot"><span class="time">16:30 – 17:30</span><span class="course">Bambinigruppe</span><span class="who">ab 4 Jahren</span></div>
+        <div class="slot"><span class="time">17:30 – 19:00</span><span class="course">Kindergruppe 2</span><span class="who">Kinder</span></div>
+        <div class="slot"><span class="time">19:00 – 20:30</span><span class="course">Kempo für Erwachsene</span><span class="who">Erwachsene</span></div>
+      </div>
+      <div class="schedule" id="day-do">
+        <div class="slot"><span class="time">ab 09:00</span><span class="course">Tai Chi &amp; Qi Gong</span><span class="who">Alle</span></div>
+        <div class="slot"><span class="time">16:30 – 17:30</span><span class="course">Kleinkindergruppe</span><span class="who">Kinder</span></div>
+        <div class="slot"><span class="time">16:30 – 17:30</span><span class="course">Kinderkickboxen</span><span class="who">Kinder</span></div>
+        <div class="slot"><span class="time">17:30 – 19:00</span><span class="course">Kindergruppe 1</span><span class="who">Kinder</span></div>
+        <div class="slot"><span class="time">ab 19:00</span><span class="course">Tai Chi &amp; Qi Gong</span><span class="who">Alle</span></div>
+        <div class="slot"><span class="time">ab 20:15</span><span class="course">MMA</span><span class="who">Erwachsene</span></div>
+      </div>
+      <div class="schedule" id="day-fr">
+        <div class="slot"><span class="time">16:30 – 17:30</span><span class="course">Bambinigruppe</span><span class="who">ab 4 Jahren</span></div>
+        <div class="slot"><span class="time">17:30 – 19:00</span><span class="course">Kindergruppe 2</span><span class="who">Kinder</span></div>
+        <div class="slot"><span class="time">19:00 – 20:30</span><span class="course">Chan Shaolin Si</span><span class="who">Erwachsene</span></div>
+        <div class="slot"><span class="time">19:00 – 20:30</span><span class="course">Kickboxen</span><span class="who">Erwachsene</span></div>
+      </div>
+
+      <p class="schedule-note">Alle Zeiten ohne Gewähr – die aktuellen Trainingszeiten erfragst du am besten kurz telefonisch oder direkt vor Ort.</p>
+    </div>
+  </section>
+
+  <!-- Standorte -->
+  <section id="standorte" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Unsere Standorte</h2>
+        <p>Zweimal am Niederrhein zuhause – trainiere dort, wo es für dich am besten passt.</p>
+      </div>
+      <div class="locations">
+        <div class="loc">
+          <h3><span class="pin">◉</span> Mönchengladbach-Rheydt</h3>
+          <address>Dauner Straße 6<br>41236 Mönchengladbach</address>
+          <a class="maplink" href="https://www.openstreetmap.org/search?query=Dauner%20Stra%C3%9Fe%206%2C%2041236%20M%C3%B6nchengladbach" target="_blank" rel="noopener">Auf der Karte ansehen →</a>
+        </div>
+        <div class="loc">
+          <h3><span class="pin">◉</span> Erkelenz</h3>
+          <address>Aachener Straße 75<br>41812 Erkelenz</address>
+          <a class="maplink" href="https://www.openstreetmap.org/search?query=Aachener%20Stra%C3%9Fe%2075%2C%2041812%20Erkelenz" target="_blank" rel="noopener">Auf der Karte ansehen →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="sec-head" style="margin-bottom:0">
+          <h2>Kontakt</h2>
+          <p>Fragen zu Kursen, Zeiten oder zum Einstieg? Melde dich – wir freuen uns auf dich.</p>
+        </div>
+        <ul class="contact-list">
+          <li>
+            <span class="ico">☎</span>
+            <span><b>Telefon</b><a href="tel:+4921661339360">02166 133 93 60</a></span>
+          </li>
+          <li>
+            <span class="ico">📱</span>
+            <span><b>Mobil</b><a href="tel:+491755613617">0175 561 36 17</a></span>
+          </li>
+          <li>
+            <span class="ico">✉</span>
+            <span><b>E-Mail</b><a href="mailto:info@kampfkunst-damo.de">info@kampfkunst-damo.de</a></span>
+          </li>
+          <li>
+            <span class="ico">◎</span>
+            <span><b>Instagram</b><a href="https://www.instagram.com/kampfkunst.schule.damo/" target="_blank" rel="noopener">@kampfkunst.schule.damo</a></span>
+          </li>
+        </ul>
+      </div>
+      <div class="probe">
+        <h3>Kostenloses Probetraining</h3>
+        <p>
+          Du möchtest DAMO kennenlernen? Komm einfach zum gewünschten Training vorbei und melde
+          dich beim jeweiligen Trainer – <strong>kostenlos und unverbindlich</strong>. Bequeme
+          Sportkleidung genügt.
+        </p>
+        <a class="cta" href="mailto:info@kampfkunst-damo.de?subject=Probetraining">Probetraining anfragen</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="year"></span> Kampfkunstschule DAMO – Royal Martial-Arts Academy Europe e.V.</div>
+    <nav>
+      <a href="#angebot">Angebot</a>
+      <a href="#zeiten">Trainingszeiten</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#" title="Vor dem Live-Gang ergänzen">Impressum</a>
+      <a href="#" title="Vor dem Live-Gang ergänzen">Datenschutz</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(btn) {
+  const menu = document.getElementById('menu');
+  const open = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}
+document.querySelectorAll('#menu a').forEach(a =>
+  a.addEventListener('click', () => document.getElementById('menu').classList.remove('open'))
+);
+function showDay(btn, day) {
+  document.querySelectorAll('.day-tabs button').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.schedule').forEach(s => s.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('day-' + day).classList.add('active');
+}
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
